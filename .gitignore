@@ -1,8 +1,8 @@
+*.csv
 *.png
 *.pdf
 *.pyc
 *.aux
-*.yaml
 *.mp4
 *.txt
 *.egg
@@ -21,3 +21,4 @@ backup/
 .pytest_cache/
 imgui.ini
 __pycache__/
+src/Methods/*
