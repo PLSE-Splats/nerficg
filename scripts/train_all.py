@@ -31,19 +31,19 @@ def main(config_path: str = None):
 
 if __name__ == "__main__":
     configs = [
-        # "fg_bicycle",
-        # "fg_bonsai",
-        # "fg_counter",
-        # "fg_drjohnson",
+        "fg_bicycle",
+        "fg_bonsai",
+        "fg_counter",
+        "fg_drjohnson",
         "fg_flowers",
         "fg_garden",
-        # "fg_kitchen",
-        # "fg_playroom",
-        # "fg_room",
-        # "fg_stump",
-        # "fg_train",
-        # "fg_treehill",
-        # "fg_truck",
+        "fg_kitchen",
+        "fg_playroom",
+        "fg_room",
+        "fg_stump",
+        "fg_train",
+        "fg_treehill",
+        "fg_truck",
     ]
     Logger.set_mode(Logger.MODE_VERBOSE)
     rows = ["config_name,training_time_seconds,psnr,ssim,lpips"]
