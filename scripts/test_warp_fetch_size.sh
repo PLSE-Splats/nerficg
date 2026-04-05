@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+repo_root="$(pwd)"
 config="$repo_root/src/Methods/FasterGS/FasterGSCudaBackend/FasterGSCudaBackend/rasterization/include/rasterization_config.h"
 backend_dir="$repo_root/src/Methods/FasterGS/FasterGSCudaBackend"
 
@@ -29,7 +29,7 @@ path.write_text(new_text, encoding='utf-8')
 PY
 
   (cd "$backend_dir" && python -m pip install . --no-build-isolation > "$repo_root/build_${n}.log" 2>&1)
-  python scripts/inference_all.py > "$repo_root/inference_${n}.log" 2>&1
+  python scripts/benchmark_all.py > "$repo_root/inference_${n}.log" 2>&1
 
   test -f all_fps.csv
   lines="$(wc -l < all_fps.csv)"
